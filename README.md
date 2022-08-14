@@ -13,7 +13,7 @@ The turorial will take you through the follwing steps:
 3. Download an Itegrated Development Environment, IDE, Visual Studio Code.
 4. Running the first program.
 
-## Identify or confirm the processor and operating system running on your laptop
+## 1. Identify or confirm the processor and operating system running on your laptop
 
 Depending on the operating system on your computer, please use one of the following mechanisms to identify or confirm the type of operating system and the type of processor. Please note that this tutorial assumes that you have one of the three operating systems avaliable, Linux, Windows or MacOS.
 
@@ -47,7 +47,7 @@ In case of the MacOS, the newer computers may have the M1 processor while some o
 
 ![macos arch](content/macos-arch.png?raw=true "Macos Arch")
 
-## Obtain and install the right compier
+## 2. Obtain and install the right compier
 
 The method to get and install the GNU C/C++ Compiler differs based on the operating system. Please not that we are using the __"GNU Compiler"__.
 
@@ -114,6 +114,47 @@ Start the terminal program and run the following command:
     $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 ![macos homebrew](content/brew-install.gif?raw=true "Install Brew on Macos")
+
+In some cases homebrew will request the installation of _Apple's Xcode tools_. 
+
+Once the installation of Homebrew is completed, the _brew_ command is available. Please use the following command to install gcc
+
+    $ brew install gcc
+
+Gcc installation can be verifired by the following command
+
+    $ gcc-12 -v
+
+The following is the expedcted infomraiton
+
+![macos gcc verify](content/gcc-verify-macos.png?raw=true "Verify gcc on Macos")
+
+Note that the command might differ based on hte verion of the gcc compiler. Please also note that the default _gcc_ command may be bound to Apple's default _clang_ compiler. Please verfiy the installation with the correct command and note that it is pointing to the one installed using homebrew. 
+
+It should look something like the following:
+
+![macos gcc path verify](content/gcc-verify-macos-path.png?raw=true "Verify gcc path on Macos")
+
+## 3. Install Visual Studio Code for editing C programs
+
+Visual Studio Code is an open-source IDE avaliable for Linux, Windows and MacOS. It can be downloaded [here](https://code.visualstudio.com). Please download and install the right version for your operating system.
+
+### In case of Ubuntu Linux
+
+In case you are using Ubuntu Linux you can install Visual Studio Code using the snap command as follows:
+
+    $ sudo snap install code --classic
+
+This will prompt for _sudo_ password and will install the offcial Visual Studio Code as a snap package in Ubuntu.
+
+
+Visual Studio Code would look like the following upon launching (Colours may differ).
+
+![vscode](content/vscode.png?raw=true "Visual Studio Code Main Window")
+
+## 4. Launch and run a C program
+
+
 
 # References
 
