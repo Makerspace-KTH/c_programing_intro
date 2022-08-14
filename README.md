@@ -18,13 +18,17 @@ The turorial will take you through the follwing steps:
 
 ### Windows
 
+![windows11 arch procedure](content/windows11-arch-process.gif?raw=true "Windows 11 Arch Procedure")
+
+![windows11 arch](content/windows11-arch.png?raw=true "Windows 11 Arch")
+
 ### Linux
 
 ### MACOS
 
-![macos arch](content/macos-arch.png?raw=true "Macos Arch")
-
 ![macos arch procedure](content/macos-arch-process.gif?raw=true "Macos Arch Procedure")
+
+![macos arch](content/macos-arch.png?raw=true "Macos Arch")
 
 ## Identify your machine, the architecture.
 
