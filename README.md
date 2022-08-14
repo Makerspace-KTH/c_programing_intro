@@ -24,6 +24,8 @@ The turorial will take you through the follwing steps:
 
 ![macos arch](content/macos-arch.png?raw=true "Macos Arch")
 
+![macos arch procedure](content/macos-arch-process.gif?raw=true "Macos Arch Procedure")
+
 ## Identify your machine, the architecture.
 
 A machine "_architecture_" loosely refers to the type of processor that is being used on the machine on which the compiler is being installed. Depending on the manufacturer, brand and when the device was manufacturd, there may be variations. In this guide, only a simple discussion based on the most popular devices avaliable now is discussed. However, there are a number of specialised devices and architectures, which while may use the same compiler as us, the installtion is out of scope of the current 
