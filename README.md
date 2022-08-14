@@ -24,6 +24,8 @@ The turorial will take you through the follwing steps:
 
 ### Linux
 
+![linux arch](content/linux-arch.png?raw=true "Linux Arch")
+
 ### MACOS
 
 ![macos arch procedure](content/macos-arch-process.gif?raw=true "Macos Arch Procedure")
