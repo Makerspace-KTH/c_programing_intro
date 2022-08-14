@@ -14,7 +14,7 @@ The turorial will take you through the follwing steps:
 6. Running the first program.
 
 
-## Identify your operating system. 
+## Identify your operating system.
 
 ### Windows
 
