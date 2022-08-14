@@ -1,22 +1,29 @@
 # Getting started to program in C
 
-This project contains information to install the GNU C compiler binary and the GNU make system to help compile C programs. This would be one of the first steps to be ready to start writing programs and run them. This tutorial assums that you have a computer with an internet connection which is running either Windows (Windows 10, 11, 7), Linux (Ubunbut/Debian) or MacOS. 
+A machine "_architecture_" loosely refers to the type of processor that is being used on the machine on which the compiler is being installed. Depending on the manufacturer, brand and when the device was manufacturd, there may be variations.
+
+This project contains information to install the GNU C compiler binary and the GNU make system to help compile C programs. This would be one of the first steps to be ready to start writing programs and run them. This tutorial assums that you have a computer with an internet connection which is running either Windows (Windows 10, 11, 7), Linux (Ubunbut/Debian) or MacOS.
 
 Please contact the administrator if you need help identifying your computer architecture or operating system. The following tutoral should work on most systems.
 
 The turorial will take you through the follwing steps:
 
-1. Identify the operating system running on your laptop.
-2. Idenfiy your machine's architecture.
-3. Obtaining the right compier.
-4. Installation of the compiler.
-5. Obtaining and installing a Itegrated Development Environment, IDE. 
-6. Running the first program.
+1. Identify or confirm the processor and operating system running on your laptop.
+2. Obtain and install the right compier.
+3. Download an Itegrated Development Environment, IDE, Visual Studio Code.
+4. Running the first program.
 
+## Identify or confirm the processor and operating system running on your laptop
 
-## Identify your operating system.
+Depending on the operating system on your computer, please use one of the following mechanisms to identify or confirm the type of operating system and the type of processor. Please note that this tutorial assumes that you have one of the three operating systems avaliable, Linux, Windows or MacOS.
+
+In case you are using a Chromebook, Andriod or IOS on a IPad, the following instructions would not work as they contain different processor architectures than the standard x86_64 version that is used by the introductory course. While there are apps or mechanisms to make basic C programs to work on these systems, they are considered out of scope for the purpose of this course.
+
+Please note that this tutorial assumes you are using Ubuntu or other Debian based Linux distributions with a Aptitude based package managing system. In case you are using any of the other UNIX based operating systems or Linux distributions please refer to your respective pacakage management systems for installing the GNU-C compiler. Installing the compiler by compiling its source is out of scope for this tutorial.
 
 ### Windows
+
+We will use the GNU-C compiler for windows. The following is the method to confirm the processor architecture and Windows versions. This method is will work on Windows 10 and Windows 11 operating systems. It is important to note that you have a __"64-bit Processor"__ displayed. Please contact the course administrators in case it says 32-bits.
 
 ![windows11 arch procedure](content/windows11-arch-process.gif?raw=true "Windows 11 Arch Procedure")
 
@@ -24,17 +31,89 @@ The turorial will take you through the follwing steps:
 
 ### Linux
 
+On linux, please run the following command to display the version of the Linux Kernel as well as the architecture its running.
+
+    $ uname -a
+
+The command showuld produce the following output.
+
 ![linux arch](content/linux-arch.png?raw=true "Linux Arch")
 
 ### MACOS
+
+In case of the MacOS, the newer computers may have the M1 processor while some of them maybe using the Intel processors. There might be slight differences in the way compilers are installed. The following determines the mechanism to determine the processor on a computer running Macos
 
 ![macos arch procedure](content/macos-arch-process.gif?raw=true "Macos Arch Procedure")
 
 ![macos arch](content/macos-arch.png?raw=true "Macos Arch")
 
-## Identify your machine, the architecture.
+## Obtain and install the right compier
 
-A machine "_architecture_" loosely refers to the type of processor that is being used on the machine on which the compiler is being installed. Depending on the manufacturer, brand and when the device was manufacturd, there may be variations. In this guide, only a simple discussion based on the most popular devices avaliable now is discussed. However, there are a number of specialised devices and architectures, which while may use the same compiler as us, the installtion is out of scope of the current 
+The method to get and install the GNU C/C++ Compiler differs based on the operating system. Please not that we are using the __"GNU Compiler"__.
+
+Please note that there are other compilers such as LLVM/Clang, Intel, Borland, etc., some of which may be installed by default on your computer. The objective of the course and the programs listed are designed assuming GNU compilers. While programs may compile, some of the commands and methods may differ for other compilers. Thus, it is reccomended to use GNU C for the purpose of this course.
+
+### GCC on Linux
+
+On linux, please run the following command to display the version of the Linux Kernel as well as the architecture its running.
+The following command assumes that you have Ubuntu or Debian:
+
+    $ sudo apt -y install gcc
+
+Please enter your password in case prompted.
+
+Verify installation by running the following command
+
+    $ gcc -v 
+
+You should see an output like the following:
+
+![linux gcc verify](content/linux-verify.png?raw=true "Linux Verify GCC")
+
+### GCC on Windows
+
+GCC on Windows is avaliable from the [MinGW](https://www.mingw-w64.org)  who release binaries of the latest releases.
+
+
+
+The latest releases can be downloaded [here](https://github.com/niXman/mingw-builds-binaries/releases)
+
+Download the a release with the following pattern
+
+    x86_64-XX.X.X-release-posix-sjlj-rt_vXX-revX.Xz
+
+For example,
+
+    x86_64-12.1.0-release-posix-sjlj-rt_v10-rev3.7z
+
+
+The releases are compressed in 7-zip format. Please download the following software to uncompress the donloaded folder. 7-Zip can be downloaded from [here](https://www.7-zip.org/index.html). Please download the exe for 64-bit x64, [Direct link for download](https://www.7-zip.org/a/7z2201-x64.exe).
+
+The unpressed file will create a folder called _"mingw64"_  with content as shown in the following pictures.
+
+#### Modfy the path variable in Windows
+
+Copy the mingw64 folder to _C:\windows_
+
+The above location has to be added to Windows' system path for various software to discover the compiler. 
+
+On windows  Power Shell is used as a terminal. Power shell can be launched using the run dialogue. On the desktop hold _Win Key + r_ to bring up run dialogue. Type _"powershell"_ and press the run button to launch _powershell_ terminal.
+
+Verify installation by running the following command
+
+    c:\ gcc -v
+
+- Add gif image.
+
+### GCC Macos using Homebrew
+
+[Homebrew](https://brew.sh) is a package management system for Mac OS.
+
+Start the terminal program and run the following command:
+
+    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+![macos homebrew](content/brew-install.gif?raw=true "Install Brew on Macos")
 
 # References
 
