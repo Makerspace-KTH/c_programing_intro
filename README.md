@@ -72,9 +72,7 @@ You should see an output like the following:
 
 ### GCC on Windows
 
-GCC on Windows is available from the [MinGW](https://www.mingw-w64.org)  who release binaries of the latest releases.
-
-
+GCC on Windows is available from the [MinGW](https://www.mingw-w64.org)  which releases binaries of the latest versions.
 
 The latest releases can be downloaded [here](https://github.com/niXman/mingw-builds-binaries/releases)
 
@@ -91,19 +89,23 @@ The releases are compressed in 7-zip format. Please download the following softw
 
 The unpressed file will create a folder called _"mingw64"_  with content as shown in the following pictures.
 
+![windows gcc install](content/windows-gcc-install.gif?raw=true "Windows GCC Install")
+
 #### Modify the path variable in Windows
 
-Copy the mingw64 folder to _C:\windows_
+Copy the mingw64 folder to _C:\windows\\_
 
 The above location has to be added to Windows' system path for various software to discover the compiler.
 
 On windows  Power Shell is used as a terminal. Power shell can be launched using the run dialogue. On the desktop hold _Win Key + r_ to bring up run dialogue. Type _"powershell"_ and press the run button to launch _powershell_ terminal.
 
+![windows gcc verify](content/windows-gcc-path-verify.gif?raw=true "Windows GCC Path and verify")
+
 Verify installation by running the following command
 
-    c:\ gcc -v
+    c:\Users\user1> gcc -v
 
-- Add gif image.
+![windows gcc verify](content/windows-gcc-verify.png?raw=true "Windows Verify GCC")
 
 ### GCC Macos using Homebrew
 
