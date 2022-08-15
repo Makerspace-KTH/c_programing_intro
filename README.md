@@ -8,10 +8,20 @@ Please contact the administrator if you need help identifying your computer arch
 
 The tutorial will take you through the following steps:
 
-1. Identify or confirm the processor and operating system running on your laptop.
-2. Obtain and install the right compiler.
-3. Download an Integrated Development Environment, IDE, Visual Studio Code.
-4. Running the first program.
+- [Getting started to program in C](#getting-started-to-program-in-c)
+  - [1. Identify or confirm the processor and operating system running on your laptop](#1-identify-or-confirm-the-processor-and-operating-system-running-on-your-laptop)
+    - [Windows](#windows)
+    - [Linux](#linux)
+    - [MACOS](#macos)
+  - [2. Obtain and install the right compiler](#2-obtain-and-install-the-right-compiler)
+    - [GCC on Linux](#gcc-on-linux)
+    - [GCC on Windows](#gcc-on-windows)
+      - [Modify the path variable in Windows](#modify-the-path-variable-in-windows)
+    - [GCC Macos using Homebrew](#gcc-macos-using-homebrew)
+  - [3. Install Visual Studio Code for editing C programs](#3-install-visual-studio-code-for-editing-c-programs)
+    - [In case of Ubuntu Linux](#in-case-of-ubuntu-linux)
+  - [4. Launch and run a C program](#4-launch-and-run-a-c-program)
+- [References](#references)
 
 ## 1. Identify or confirm the processor and operating system running on your laptop
 
@@ -156,7 +166,21 @@ Visual Studio Code would look like the following upon launching (Colours may dif
 
 ## 4. Launch and run a C program
 
+Download the contents of this repository as a zip file as shown by clicking the code button at the top of this [page](https://github.com/Makerspace-KTH/c_programing_intro).
 
+![github download](content/download-hello.png?raw=true "Download Hello World")
+
+Open the downloaded folder in Visual Studio Code. In case it provides a warning for trusting the developers in the folder, please accept / trust the developers.
+
+Then click on the C program _hello.c_. This programs just prints the message "Hello, World!" to the console and will verify that the gcc is installed and ready to be used to compile programs.
+
+Launch a Terminal from the toolbar and type the following command to compile the _hello.c_ file.
+
+    $ gcc hello.c
+
+This command generates the _"a.out"_ binary that can run. This file can be run with the following command.
+
+    $ ./a.out
 
 # References
 
