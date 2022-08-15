@@ -21,7 +21,11 @@ The tutorial will take you through the following steps:
   - [3. Install Visual Studio Code for editing C programs](#3-install-visual-studio-code-for-editing-c-programs)
     - [In case of Ubuntu Linux](#in-case-of-ubuntu-linux)
   - [4. Launch and run a C program](#4-launch-and-run-a-c-program)
-- [References](#references)
+  - [5. Installing GNU Make](#5-installing-gnu-make)
+    - [Linux](#linux-1)
+    - [Windows](#windows-1)
+    - [Macos](#macos-1)
+  - [References](#references)
 
 ## 1. Identify or confirm the processor and operating system running on your laptop
 
@@ -68,7 +72,7 @@ Please note that there are other compilers such as LLVM/Clang, Intel, Borland, e
 On linux, please run the following command to display the version of the Linux Kernel as well as the architecture its running.
 The following command assumes that you have Ubuntu or Debian:
 
-    $ sudo apt -y install gcc
+    $ sudo apt -y install build-essential
 
 Please enter your password in case prompted.
 
@@ -186,7 +190,29 @@ The following demonstrates the same
 
 ![run hello](content/run-hello.gif?raw=true "Run Hello")
 
-# References
+## 5. Installing GNU Make
+
+GNU Make is a tool that automates issuing of compile commands to build multiple files together. Completing the above task of installing the compilers automatically installs the _GNU Make_ command as part of the process.
+
+### Linux
+
+On linux _GNU Make_ is part of the _build-essential_ package. The installation can be verified with the following command:
+
+    $ make -v
+
+### Windows
+
+On Windows, installing the _mingw-64_ also provides a version of _GNU Make_. Please note that the command name is slightly different. This can be invoked with the following command in a _Power Shell_.
+
+    c:\Users\user1> mingw32-make.exe -v
+
+### Macos
+
+On Macos GNU make is part of the _Xcode Essentials_ package that is installed during the Homebrew installation. Make can be verified with the following command in Terminal.
+
+    $ make -v
+
+## References
 
 1. [Tutorials Point](https://www.tutorialspoint.com/makefile/index.htm)
 2. [Make files with examples](https://makefiletutorial.com)
