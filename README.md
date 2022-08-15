@@ -25,6 +25,7 @@ The tutorial will take you through the following steps:
     - [Linux](#linux-1)
     - [Windows](#windows-1)
     - [Macos](#macos-1)
+    - [Compiling Hello with GNU Make](#compiling-hello-with-gnu-make)
   - [References](#references)
 
 ## 1. Identify or confirm the processor and operating system running on your laptop
@@ -211,6 +212,27 @@ On Windows, installing the _mingw-64_ also provides a version of _GNU Make_. Ple
 On Macos GNU make is part of the _Xcode Essentials_ package that is installed during the Homebrew installation. Make can be verified with the following command in Terminal.
 
     $ make -v
+
+### Compiling Hello with GNU Make
+
+This project has a _Makefile_ available that will compile the C program _hello.c_. This can be tested in a terminal, similar to the process described in Section 4. Open a terminal from the menu bar and type the following command:
+
+    $ make
+
+This will generate a binary _"hello"_ program. This can be executed using the same method as above by typing on Linux/Macos
+
+    $ ./hello
+
+or on Windows
+
+To compile the program using GNU make
+
+    C:\Users\user1\c_prgraming_intro> mingw32-make.exe
+
+To run the program on Windows
+
+    C:\Users\user1\c_prgraming_intro> hello.exe
+
 
 ## References
 
