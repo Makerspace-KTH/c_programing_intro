@@ -1,25 +1,25 @@
 # Getting started to program in C
 
-A machine "_architecture_" loosely refers to the type of processor that is being used on the machine on which the compiler is being installed. Depending on the manufacturer, brand and when the device was manufacturd, there may be variations.
+A machine "_architecture_" loosely refers to the type of processor that is being used on the machine on which the compiler is being installed. Depending on the manufacturer, brand and when the device was manufactured, there may be variations.
 
-This project contains information to install the GNU C compiler binary and the GNU make system to help compile C programs. This would be one of the first steps to be ready to start writing programs and run them. This tutorial assums that you have a computer with an internet connection which is running either Windows (Windows 10, 11, 7), Linux (Ubunbut/Debian) or MacOS.
+This project contains information to install the GNU C compiler binary and the GNU make system to help compile C programs. This would be one of the first steps to be ready to start writing programs and run them. This tutorial assumes that you have a computer with an internet connection which is running either Windows (Windows 10, 11, 7), Linux (Ubuntu/Debian) or MacOS.
 
-Please contact the administrator if you need help identifying your computer architecture or operating system. The following tutoral should work on most systems.
+Please contact the administrator if you need help identifying your computer architecture or operating system. The following tutorial should work on most systems.
 
-The turorial will take you through the follwing steps:
+The tutorial will take you through the following steps:
 
 1. Identify or confirm the processor and operating system running on your laptop.
-2. Obtain and install the right compier.
-3. Download an Itegrated Development Environment, IDE, Visual Studio Code.
+2. Obtain and install the right compiler.
+3. Download an Integrated Development Environment, IDE, Visual Studio Code.
 4. Running the first program.
 
 ## 1. Identify or confirm the processor and operating system running on your laptop
 
-Depending on the operating system on your computer, please use one of the following mechanisms to identify or confirm the type of operating system and the type of processor. Please note that this tutorial assumes that you have one of the three operating systems avaliable, Linux, Windows or MacOS.
+Depending on the operating system on your computer, please use one of the following mechanisms to identify or confirm the type of operating system and the type of processor. Please note that this tutorial assumes that you have one of the three operating systems available, Linux, Windows or MacOS.
 
-In case you are using a Chromebook, Andriod or IOS on a IPad, the following instructions would not work as they contain different processor architectures than the standard x86_64 version that is used by the introductory course. While there are apps or mechanisms to make basic C programs to work on these systems, they are considered out of scope for the purpose of this course.
+In case you are using a Chromebook, Android or IOS on a IPad, the following instructions would not work as they contain different processor architectures than the standard x86_64 version that is used by the introductory course. While there are apps or mechanisms to make basic C programs to work on these systems, they are considered out of scope for the purpose of this course.
 
-Please note that this tutorial assumes you are using Ubuntu or other Debian based Linux distributions with a Aptitude based package managing system. In case you are using any of the other UNIX based operating systems or Linux distributions please refer to your respective pacakage management systems for installing the GNU-C compiler. Installing the compiler by compiling its source is out of scope for this tutorial.
+Please note that this tutorial assumes you are using Ubuntu or other Debian based Linux distributions with a Aptitude based package managing system. In case you are using any of the other UNIX based operating systems or Linux distributions please refer to your respective package management systems for installing the GNU-C compiler. Installing the compiler by compiling its source is out of scope for this tutorial.
 
 ### Windows
 
@@ -35,7 +35,7 @@ On linux, please run the following command to display the version of the Linux K
 
     $ uname -a
 
-The command showuld produce the following output.
+The command should produce the following output.
 
 ![linux arch](content/linux-arch.png?raw=true "Linux Arch")
 
@@ -47,11 +47,11 @@ In case of the MacOS, the newer computers may have the M1 processor while some o
 
 ![macos arch](content/macos-arch.png?raw=true "Macos Arch")
 
-## 2. Obtain and install the right compier
+## 2. Obtain and install the right compiler
 
 The method to get and install the GNU C/C++ Compiler differs based on the operating system. Please not that we are using the __"GNU Compiler"__.
 
-Please note that there are other compilers such as LLVM/Clang, Intel, Borland, etc., some of which may be installed by default on your computer. The objective of the course and the programs listed are designed assuming GNU compilers. While programs may compile, some of the commands and methods may differ for other compilers. Thus, it is reccomended to use GNU C for the purpose of this course.
+Please note that there are other compilers such as LLVM/Clang, Intel, Borland, etc., some of which may be installed by default on your computer. The objective of the course and the programs listed are designed assuming GNU compilers. While programs may compile, some of the commands and methods may differ for other compilers. Thus, it is recommended to use GNU C for the purpose of this course.
 
 ### GCC on Linux
 
@@ -72,7 +72,7 @@ You should see an output like the following:
 
 ### GCC on Windows
 
-GCC on Windows is avaliable from the [MinGW](https://www.mingw-w64.org)  who release binaries of the latest releases.
+GCC on Windows is available from the [MinGW](https://www.mingw-w64.org)  who release binaries of the latest releases.
 
 
 
@@ -87,15 +87,15 @@ For example,
     x86_64-12.1.0-release-posix-sjlj-rt_v10-rev3.7z
 
 
-The releases are compressed in 7-zip format. Please download the following software to uncompress the donloaded folder. 7-Zip can be downloaded from [here](https://www.7-zip.org/index.html). Please download the exe for 64-bit x64, [Direct link for download](https://www.7-zip.org/a/7z2201-x64.exe).
+The releases are compressed in 7-zip format. Please download the following software to uncompressed the downloaded folder. 7-Zip can be downloaded from [here](https://www.7-zip.org/index.html). Please download the exe for 64-bit x64, [Direct link for download](https://www.7-zip.org/a/7z2201-x64.exe).
 
 The unpressed file will create a folder called _"mingw64"_  with content as shown in the following pictures.
 
-#### Modfy the path variable in Windows
+#### Modify the path variable in Windows
 
 Copy the mingw64 folder to _C:\windows_
 
-The above location has to be added to Windows' system path for various software to discover the compiler. 
+The above location has to be added to Windows' system path for various software to discover the compiler.
 
 On windows  Power Shell is used as a terminal. Power shell can be launched using the run dialogue. On the desktop hold _Win Key + r_ to bring up run dialogue. Type _"powershell"_ and press the run button to launch _powershell_ terminal.
 
@@ -121,15 +121,15 @@ Once the installation of Homebrew is completed, the _brew_ command is available.
 
     $ brew install gcc
 
-Gcc installation can be verifired by the following command
+Gcc installation can be verified by the following command
 
     $ gcc-12 -v
 
-The following is the expedcted infomraiton
+The following is the expected information
 
 ![macos gcc verify](content/gcc-verify-macos.png?raw=true "Verify gcc on Macos")
 
-Note that the command might differ based on hte verion of the gcc compiler. Please also note that the default _gcc_ command may be bound to Apple's default _clang_ compiler. Please verfiy the installation with the correct command and note that it is pointing to the one installed using homebrew. 
+Note that the command might differ based on the version of the gcc compiler. Please also note that the default _gcc_ command may be bound to Apple's default _clang_ compiler. Please verify the installation with the correct command and note that it is pointing to the one installed using homebrew.
 
 It should look something like the following:
 
@@ -137,7 +137,7 @@ It should look something like the following:
 
 ## 3. Install Visual Studio Code for editing C programs
 
-Visual Studio Code is an open-source IDE avaliable for Linux, Windows and MacOS. It can be downloaded [here](https://code.visualstudio.com). Please download and install the right version for your operating system.
+Visual Studio Code is an open-source IDE available for Linux, Windows and MacOS. It can be downloaded [here](https://code.visualstudio.com). Please download and install the right version for your operating system.
 
 ### In case of Ubuntu Linux
 
@@ -145,7 +145,7 @@ In case you are using Ubuntu Linux you can install Visual Studio Code using the 
 
     $ sudo snap install code --classic
 
-This will prompt for _sudo_ password and will install the offcial Visual Studio Code as a snap package in Ubuntu.
+This will prompt for _sudo_ password and will install the official Visual Studio Code as a snap package in Ubuntu.
 
 
 Visual Studio Code would look like the following upon launching (Colours may differ).
