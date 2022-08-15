@@ -182,6 +182,10 @@ This command generates the _"a.out"_ binary that can run. This file can be run w
 
     $ ./a.out
 
+The following demonstrates the same
+
+![run hello](content/run-hello.gif?raw=true "Run Hello")
+
 # References
 
 1. [Tutorials Point](https://www.tutorialspoint.com/makefile/index.htm)
