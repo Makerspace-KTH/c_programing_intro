@@ -87,9 +87,11 @@ You should see an output like the following:
 
 ### GCC on Windows
 
-GCC on Windows is available from the [MinGW](https://www.mingw-w64.org)  which releases binaries of the latest versions.
+GCC on Windows is available from the [MinGW](https://www.mingw-w64.org)  which releases binaries of the latest versions. 
 
 The latest releases can be downloaded [here](https://github.com/niXman/mingw-builds-binaries/releases)
+
+NOTE: the files have to be compiled for the 64 bit processor. This is indicated in the name as  __"x86_64"__.
 
 Download the a release with the following pattern
 
@@ -99,8 +101,7 @@ For example,
 
     x86_64-12.1.0-release-posix-sjlj-rt_v10-rev3.7z
 
-
-The releases are compressed in 7-zip format. Please download the following software to uncompressed the downloaded folder. 7-Zip can be downloaded from [here](https://www.7-zip.org/index.html). Please download the exe for 64-bit x64, [Direct link for download](https://www.7-zip.org/a/7z2201-x64.exe).
+The releases are compressed in 7-zip format. Please download the following software to uncompressed the downloaded folder. 7-Zip can be downloaded from [here](https://www.7-zip.org/index.html). Please download the exe for __64-bit x86_64__, [Direct link for download](https://www.7-zip.org/a/7z2201-x64.exe).
 
 The unpressed file will create a folder called _"mingw64"_  with content as shown in the following pictures.
 
