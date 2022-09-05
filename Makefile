@@ -1,5 +1,5 @@
 # Location of where hello.c is stored in
-SRCDIR=.
+#SRCDIR=.
 
 # Name of the compiler, GNU GCC in this case
 CC=gcc
@@ -8,19 +8,16 @@ CC=gcc
 CFLAG= -g
 
 # Any include directories
-INCLUDE = 
+#INCLUDE = 
 
 # Any libraries to link with
-LIBS =
-
+#LIBS =
 
 all: hello
 
 hello:
-	$(CC) $(SRCDIR)/hello.c -o $@ $(LIBS) 
+#	$(CC) $(SRCDIR)/hello.c -o $@ $(LIBS) 
+	$(CC) hello.c -o hello
 
 clean:
-	rm -f *.o
-	rm -f a.out
 	rm hello
-
