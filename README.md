@@ -16,15 +16,15 @@ The tutorial will take you through the following steps:
   - [2. Obtain and install the right compiler](#2-obtain-and-install-the-right-compiler)
     - [GCC on Linux](#gcc-on-linux)
     - [GCC on Windows](#gcc-on-windows)
-      - [Modify the path variable in Windows](#modify-the-path-variable-in-windows)
+      - [Using the Msys console for compiling](#using-the-msys-console-for-compiling)
     - [GCC Macos using Homebrew](#gcc-macos-using-homebrew)
   - [3. Install Visual Studio Code for editing C programs](#3-install-visual-studio-code-for-editing-c-programs)
     - [In case of Ubuntu Linux](#in-case-of-ubuntu-linux)
   - [4. Launch and run a C program](#4-launch-and-run-a-c-program)
   - [5. Installing GNU Make](#5-installing-gnu-make)
-    - [Linux](#linux-1)
-    - [Windows](#windows-1)
-    - [Macos](#macos-1)
+    - [GNU Make on Linux](#gnu-make-on-linux)
+    - [GNU Make on Windows](#gnu-make-on-windows)
+    - [GNU Make on Macos](#gnu-make-on-macos)
     - [Compiling Hello with GNU Make](#compiling-hello-with-gnu-make)
   - [References](#references)
 
@@ -87,41 +87,39 @@ You should see an output like the following:
 
 ### GCC on Windows
 
-GCC on Windows is available from the [MinGW](https://www.mingw-w64.org)  which releases binaries of the latest versions. 
+GCC on Windows is available from the [MinGW](https://www.mingw-w64.org)  which releases binaries of the latest versions.
 
-The latest releases can be downloaded [here](https://github.com/niXman/mingw-builds-binaries/releases)
+We will use a distribution from [Msys2](https://www.msys2.org). This is project that collects and distributes various open-source tools and libraries and allows for proper download and install of the same.
 
-NOTE: the files have to be compiled for the 64 bit processor. This is indicated in the name as  __"x86_64"__.
+We start with the install of the Msys2 platform. The installation procedure is detailed on their site as well. Here is the summary of the process:
 
-Download the a release with the following pattern
+1. Download the latest Msys2 software from [their github release here](https://github.com/msys2/msys2-installer/releases/download/2022-09-04/msys2-x86_64-20220904.exe). Note that the file name has __"msys2-x86_64-xxxx.exe"__ to ensure that the 64-bit version is the one downloaded.
+2. Run the installer by double-clicking it.
+3. Follow the instructions. Please install the software to:
 
-    x86_64-XX.X.X-release-posix-sjlj-rt_vXX-revX.Xz
+    C:\msys2\
 
-For example,
+    ![Install msys2](https://www.msys2.org/images/install-2-path.png "Install msys2")
 
-    x86_64-12.1.0-release-posix-sjlj-rt_v10-rev3.7z
+4. When installation is complete please click finish. __Note please check the "Run MSYS2 now." checked.
 
-The releases are compressed in 7-zip format. Please download the following software to uncompressed the downloaded folder. 7-Zip can be downloaded from [here](https://www.7-zip.org/index.html). Please download the exe for __64-bit x86_64__, [Direct link for download](https://www.7-zip.org/a/7z2201-x64.exe).
+5. This is launch the "Mingw-64-msys" environment.
 
-The unpressed file will create a folder called _"mingw64"_  with content as shown in the following pictures.
+    ![msys2 terminal](https://www.msys2.org/images/install-4-terminal.png "Msys2 mingw terminal")
 
-![windows gcc install](content/windows-gcc-install.gif?raw=true "Windows GCC Install")
+6. Msys is a distribution platform and hence provides commands to search and install various tools for windows environment. The commands are based on the _pacman_ tool used by some linux distributions. Use the following commands to install the required mingw-gcc compiler.
 
-#### Modify the path variable in Windows
+    $ pacman -S mingw-w64-x86_64-toolchain
 
-Copy the mingw64 folder to _C:\windows\\_
+This will install all the required compiler and associated tools into the c:\msys2 folder.
 
-The above location has to be added to Windows' system path for various software to discover the compiler.
+#### Using the Msys console for compiling
 
-On windows  Power Shell is used as a terminal. Power shell can be launched using the run dialogue. On the desktop hold _Win Key + r_ to bring up run dialogue. Type _"powershell"_ and press the run button to launch _powershell_ terminal.
+_MSYS2_ comes with its own console which provides access to the entire _mingw_ toolchain and libraries. In order to launch the console, search for the application on the windows menu. Verify installation by running the following command
 
-![windows gcc verify](content/windows-gcc-path-verify.gif?raw=true "Windows GCC Path and verify")
+    $ gcc -v
 
-Verify installation by running the following command
-
-    c:\Users\user1> gcc -v
-
-![windows gcc verify](content/windows-gcc-verify.png?raw=true "Windows Verify GCC")
+![windows msys2 verify](content/windows-msys2-launch-verify.gif?raw=true "Windows Verify GCC on MSYS2")
 
 ### GCC Macos using Homebrew
 
@@ -165,7 +163,6 @@ In case you are using Ubuntu Linux you can install Visual Studio Code using the 
 
 This will prompt for _sudo_ password and will install the official Visual Studio Code as a snap package in Ubuntu.
 
-
 Visual Studio Code would look like the following upon launching (Colours may differ).
 
 ![vscode](content/vscode.png?raw=true "Visual Studio Code Main Window")
@@ -182,6 +179,28 @@ Then click on the C program _hello.c_. This programs just prints the message "He
 
 Launch a Terminal from the toolbar and type the following command to compile the _hello.c_ file.
 
+Note: To launch the a terminal in Windows, please use the _"Mingw-Msys2"_ console as indicated in the install section. This provides a _mingw_ environment.
+
+Change the current working directory to the location you downloaded the folder.
+
+    $ cd <location>
+
+On macos, you can copy the folder "command + c" and paste inside the Terminal app as shown.
+
+![github changedir](content/change-dir-macos.gif?raw=true "Change directory macos")
+
+On windows, you need to find the location and type the path in _bash_ format. For example, if the folder is downloaded to _C:\Users\Downloads\c_programming_intro_, type the following in the msys2 console:
+
+    $cd /c/users/downloads/c_programming_intro
+
+Note: all uppercase letters are converted to lower case in the bash format.
+
+On Linux (Ubnutu), use the window system to open the terminal in the downloaded folder as shown.
+
+![github changedir_linux](content/change-dir-linux.png?raw=true "Change directory Ubuntu")
+
+Run the following command to compile the program:
+
     $ gcc hello.c
 
 This command generates the _"a.out"_ binary that can run. This file can be run with the following command.
@@ -192,23 +211,24 @@ The following demonstrates the same
 
 ![run hello](content/run-hello.gif?raw=true "Run Hello")
 
+
 ## 5. Installing GNU Make
 
 GNU Make is a tool that automates issuing of compile commands to build multiple files together. Completing the above task of installing the compilers automatically installs the _GNU Make_ command as part of the process.
 
-### Linux
+### GNU Make on Linux
 
 On linux _GNU Make_ is part of the _build-essential_ package. The installation can be verified with the following command:
 
     $ make -v
 
-### Windows
+### GNU Make on Windows
 
-On Windows, installing the _mingw-64_ also provides a version of _GNU Make_. Please note that the command name is slightly different. This can be invoked with the following command in a _Power Shell_.
+On Windows, installing the _mingw-64_ also provides a version of _GNU Make_. Please note that the command name is slightly different. This can be invoked with the following command in a _msys2 console_.
 
-    c:\Users\user1> mingw32-make.exe -v
+    $ mingw32-make.exe -v
 
-### Macos
+### GNU Make on Macos
 
 On Macos GNU make is part of the _Xcode Essentials_ package that is installed during the Homebrew installation. Make can be verified with the following command in Terminal.
 
@@ -228,14 +248,14 @@ or on Windows
 
 To compile the program using GNU make
 
-    C:\Users\user1\c_prgraming_intro> mingw32-make.exe
+    $ mingw32-make.exe
 
 To run the program on Windows
 
-    C:\Users\user1\c_prgraming_intro> hello.exe
-
+    $ hello.exe
 
 ## References
 
 1. [Tutorials Point](https://www.tutorialspoint.com/makefile/index.htm)
 2. [Make files with examples](https://makefiletutorial.com)
+3. [Msys2](https://www.msys2.org)
