@@ -93,7 +93,7 @@ We will use a distribution from [Msys2](https://www.msys2.org). This is project 
 
 We start with the install of the Msys2 platform. The installation procedure is detailed on their site as well. Here is the summary of the process:
 
-1. Download the latest Msys2 software from [their github release here](https://github.com/msys2/msys2-installer/releases/download/2022-09-04/msys2-x86_64-20220904.exe). Note that the file name has __"msys2-x86_64-xxxx.exe"__ to ensure that the 64-bit version is the one downloaded.
+1. Download the latest Msys2 software from [their github release here](https://github.com/msys2/msys2-installer/releases/download/2024-01-13/msys2-x86_64-20240113.exe). Note that the file name has __"msys2-x86_64-xxxx.exe"__ to ensure that the 64-bit version is the one downloaded.
 2. Run the installer by double-clicking it.
 3. Follow the instructions. Please install the software to:
 
