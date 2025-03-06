@@ -141,7 +141,10 @@ Gcc installation can be verified by the following command
 
     $ gcc-12 -v
 
-The following is the expected information
+__NOTE:__
+- Newer versions of ```gcc``` maybe available or installed based on the when you install from homebrew. Please note hte version of gcc when installing. 
+- On Macos with homebrew the actual command is in the form ```gcc-<version>```.
+- Apple computers with MacOS ship with a built in ```clang```C compiler which usually has the alias of ```gcc```. This means that invoking the ```gcc```command will actually called the ```clang```compiler instead. Please check the version to ensure you are calling the _GNU C Compiler_ by using the command ```gcc -v ```. Check the previous comment to use the correct compiler.
 
 ![macos gcc verify](content/gcc-verify-macos.png?raw=true "Verify gcc on Macos")
 
